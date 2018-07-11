@@ -1,13 +1,14 @@
-// import React, { Component } from 'react';
-// import { connect } from 'react-redux';
-//
-// export class WeatherCard extends Component {
-//   render(){
-//     return(<p></p>);
-//   }
-// }
-//
-// const mapStateToProps = state => {
-//   return
-// }
-// export default connect(mapStateToProps)(WeatherCard);
+import React from 'react';
+
+
+const WeatherCard = (props) => {
+
+  return(
+    <div>
+      <p>{props.weather.currently.summary}</p>
+    </div>
+  );//closes return
+}
+
+
+export default WeatherCard;
