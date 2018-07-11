@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import './Nav.css';
 //import components below
 
 class Nav extends Component {
@@ -13,7 +14,7 @@ class Nav extends Component {
 
   render(){
     return(
-      <nav>
+      <nav className="nav-bar">
         <NavLink to='/home'>Home</NavLink>
       </nav>
     );//closes return

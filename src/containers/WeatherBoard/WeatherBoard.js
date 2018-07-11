@@ -5,6 +5,7 @@ import { loadWeather, createWeather, destroyWeather, updateWeather } from '../..
 //import components here
 import WeatherCard from '../../components/WeatherCard/WeatherCard.js';
 import AddWeather from '../AddWeather/AddWeather.js';
+import './WeatherBoard.css'
 
 
 export class WeatherBoard extends Component {
@@ -22,7 +23,7 @@ export class WeatherBoard extends Component {
     const weatherArr = this.props.weather;
     console.log('in Weatherboard weatherArr: ' + weatherArr);
     return weatherArr.length > 1 ? <p>Loading...</p> :
-      <div>
+      <div className='weather-board'>
         <h3>WeatherBoard</h3>
         <p>Our Weather:</p>
         {
