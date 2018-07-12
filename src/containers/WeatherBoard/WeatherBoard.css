@@ -5,8 +5,17 @@
   padding-top: 5px;
   padding-bottom: 15px;
 }
+.weather-card-bumper{
+  padding: 15px 15px;
+}
+
 button{
   border: none;
   padding: 5px 15px;
   border-radius: 25px;
+}
+button:hover{
+  background-color: #42bcf4;
+  color: white;
+  transition-duration: 0.4s;
 }

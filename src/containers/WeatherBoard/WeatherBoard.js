@@ -13,11 +13,8 @@ export class WeatherBoard extends Component {
   //we do this to prevent componentDidMount from loading prior to data being loaded into state
   async componentDidMount(){
     await this.props.loadWeather();//can put it in the redux store now
-  }//closes componentWillMount
-  /*
-  async - "we will be using the await keyword inside this function" - looks different in arrow functions
-  await - "dont go down to the next line until this line is done"
-  */
+  }//closes componentDidMount
+
   removeCard = (weather) => {
     this.props.destroyWeatherSuccess(weather);
   }
@@ -33,6 +30,7 @@ export class WeatherBoard extends Component {
           this.removeCard(weather);
           }
         }>Remove</button>
+      <div className='weather-card-bumper'></div>
       </div>
     );//closes return
   }//closes renderCards

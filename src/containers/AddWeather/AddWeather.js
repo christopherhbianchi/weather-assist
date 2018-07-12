@@ -9,7 +9,8 @@ export class AddWeather extends Component {
   constructor(){
     super();
     this.state = {
-      locationToAdd: CityCoordinates.LasVegas
+      locationToAdd: CityCoordinates.LasVegas,
+      locationsAdded: { "Los Angeles": "Los Angeles" } //this could be an object of names, with their name again as the value pair
     }
   }//closes constructor
 
@@ -31,19 +32,28 @@ export class AddWeather extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.createWeather(this.state);
-  }
+    var addedObj = this.state.locationsAdded; //object of string to string key-value pairs
+    var locToAdd = this.state.locationToAdd.name; //name
+
+    if(addedObj[locToAdd]) return; //if the key exists already, do nothing
+
+    const newAddedObj = Object.assign( {}, addedObj);
+    newAddedObj[locToAdd] = locToAdd;
+    this.setState({
+      locationsAdded: newAddedObj
+    }, this.props.createWeather(this.state) );
+  }//handleSubmit
 
   render(){
     return(
-      <div className="add-weather">
+      <div className='add-weather'>
         <h3>AddWeather Container</h3>
         <form>
           <select className='select' onChange={this.handleChange}>
-            <option value="LasVegas">Las Vegas</option>
-            <option value="NewYork">New York</option>
-            <option value="Miami">Miami</option>
-            <option value="LosAngeles">Los Angeles</option>
+            <option value='LasVegas'>Las Vegas</option>
+            <option value='NewYork'>New York</option>
+            <option value='Miami'>Miami</option>
+            <option value='LosAngeles'>Los Angeles</option>
           </select>
           <button onClick={this.handleSubmit}>Add this city</button>
         </form>
@@ -56,8 +66,11 @@ export class AddWeather extends Component {
 <option value={Miami}>Miami</option>
 <option value={LosAngeles}>Los Angeles</option> */}
 
+const mapStateToProps = (state) => ({
+  weather: state.weather
+});
 const mapDispatchToProps = (dispatch) => ({
   createWeather: cityCoordinates => dispatch(createWeather(cityCoordinates))
 });
 
-export default connect(null, mapDispatchToProps)(AddWeather);
+export default connect(mapStateToProps, mapDispatchToProps)(AddWeather);

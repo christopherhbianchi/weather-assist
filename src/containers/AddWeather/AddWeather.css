@@ -9,3 +9,9 @@
 .select{
   border: 1px solid #ccc;
 }
+
+button:hover{
+  background-color: #42bcf4;
+  color: white;
+  transition-duration: 0.4s;
+}
