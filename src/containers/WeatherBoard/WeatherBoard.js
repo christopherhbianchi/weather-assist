@@ -26,8 +26,9 @@ export class WeatherBoard extends Component {
     console.log(this.props.weather);
     return this.props.weather.map( (weather, index) =>
       <div key={index}>
-        {index}: <WeatherCard weather={weather}/>
-      <button onClick={ event => {
+        <WeatherCard weather={weather}/>
+        <div className='bumper'></div>
+        <button onClick={ event => {
           event.preventDefault;
           this.removeCard(weather);
           }
@@ -39,7 +40,7 @@ export class WeatherBoard extends Component {
   render(){
     const weatherArr = this.props.weather;
     console.log('in Weatherboard weatherArr: ' + weatherArr);
-    return weatherArr.length < 1 ? <p>Loading...</p> :
+    return weatherArr.length < 1 ? <p>Explore the weather conditions around the world!</p> :
       <div className='weather-board'>
         <h3>WeatherBoard</h3>
         <p>Our Weather:</p>

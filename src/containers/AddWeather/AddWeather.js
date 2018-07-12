@@ -9,7 +9,7 @@ export class AddWeather extends Component {
   constructor(){
     super();
     this.state = {
-      locationToAdd: CityCoordinates.NewYork
+      locationToAdd: CityCoordinates.LasVegas
     }
   }//closes constructor
 
@@ -39,7 +39,7 @@ export class AddWeather extends Component {
       <div className="add-weather">
         <h3>AddWeather Container</h3>
         <form>
-          <select onChange={this.handleChange}>
+          <select className='select' onChange={this.handleChange}>
             <option value="LasVegas">Las Vegas</option>
             <option value="NewYork">New York</option>
             <option value="Miami">Miami</option>

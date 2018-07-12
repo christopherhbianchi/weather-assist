@@ -35,6 +35,7 @@ export const loadWeather = () => {
     fetch(loadUrl)
       .then( async response => {
         const weather = await response.json();
+        weather.name = "Los Angeles";
         await dispatch(loadWeatherSuccess(weather));
       })
   }//closes function
@@ -45,12 +46,14 @@ export const createWeather = (cityCoordinates) => {
   //cityCoordinates is reference to state that was passed through
   const lat = cityCoordinates.locationToAdd.latitude;
   const long = cityCoordinates.locationToAdd.longitude;
+  const cityName = cityCoordinates.locationToAdd.name;
   const weatherUrl = baseUrl + lat + ',' + long;
   console.log('weatherUrl in createWeather: ' + weatherUrl);
   return function(dispatch){
     fetch(weatherUrl)
       .then( async response => {
         const weather = await response.json();
+        weather.name = cityName;
         await dispatch(createWeatherSuccess(weather));
       })
   }//closes function
