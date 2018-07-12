@@ -61,10 +61,7 @@ export class AddWeather extends Component {
     );//closes return
   }//closes render
 }//closes class
-{/* <option value={NewYork}>New York</option>
-<option value={LasVegas}>Las Vegas</option>
-<option value={Miami}>Miami</option>
-<option value={LosAngeles}>Los Angeles</option> */}
+
 
 const mapStateToProps = (state) => ({
   weather: state.weather
