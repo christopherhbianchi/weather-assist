@@ -19,6 +19,13 @@ export function createWeatherSuccess(weather){
   }
 }//closes createWeatherSuccess
 
+export function destroyWeatherSuccess(weather){
+  return {
+    type: 'DESTROY_WEATHER_SUCCESS',
+    payload: weather
+  }
+}//closes destroyWeatherSuccess
+
 
 
 //****************************** Action Creators *****************************
@@ -51,9 +58,5 @@ export const createWeather = (cityCoordinates) => {
 
 //may have to do with having the thing make a request every 5 mins or so
 export const updateWeather = () => {
-
-}
-
-export const destroyWeather = () => {
 
 }

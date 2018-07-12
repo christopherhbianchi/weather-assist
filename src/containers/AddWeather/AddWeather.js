@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import './AddWeather.css';
 //import components below
 import { createWeather } from '../../actions/index.js';
 const CityCoordinates = require('../../resources/CityCoordinates.js');
@@ -35,7 +36,7 @@ export class AddWeather extends Component {
 
   render(){
     return(
-      <div>
+      <div className="add-weather">
         <h3>AddWeather Container</h3>
         <form>
           <select onChange={this.handleChange}>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { loadWeather, createWeather, destroyWeather, updateWeather } from '../../actions/index.js';
+import { loadWeather, createWeather, destroyWeatherSuccess, updateWeather } from '../../actions/index.js';
 //import components here
 import WeatherCard from '../../components/WeatherCard/WeatherCard.js';
 import AddWeather from '../AddWeather/AddWeather.js';
@@ -18,12 +18,23 @@ export class WeatherBoard extends Component {
   async - "we will be using the await keyword inside this function" - looks different in arrow functions
   await - "dont go down to the next line until this line is done"
   */
+  removeCard = (weather) => {
+    this.props.destroyWeatherSuccess(weather);
+  }
+
   renderCards = () => {
     console.log(this.props.weather);
     return this.props.weather.map( (weather, index) =>
-      <div key={index}>{index}: <WeatherCard weather={weather}/></div>//closes return
-    );
-  }
+      <div key={index}>
+        {index}: <WeatherCard weather={weather}/>
+      <button onClick={ event => {
+          event.preventDefault;
+          this.removeCard(weather);
+          }
+        }>Remove</button>
+      </div>
+    );//closes return
+  }//closes renderCards
 
   render(){
     const weatherArr = this.props.weather;
@@ -35,7 +46,6 @@ export class WeatherBoard extends Component {
         {
           this.renderCards()
         }
-        <AddWeather />
       </div>
   }//closes render
 }//closes Component
@@ -48,7 +58,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   loadWeather: () => dispatch(loadWeather()),
-  destroyWeather: weather => dispatch(destroyWeather(weather)),
+  destroyWeatherSuccess: weather => dispatch(destroyWeatherSuccess(weather)),
   updateWeather: weather => dispatch(updateWeather(weather))
 });
 
