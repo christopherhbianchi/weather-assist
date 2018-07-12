@@ -14,8 +14,8 @@ class Nav extends Component {
 
   render(){
     return(
-      <nav className="nav-bar">
-        <NavLink to='/home'>Home</NavLink>
+      <nav className='nav-bar'>
+        <NavLink className='nav-link' to='/home'>Home</NavLink>
       </nav>
     );//closes return
   }//closes render

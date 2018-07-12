@@ -35,11 +35,11 @@ export const loadWeather = () => {
 
 
 export const createWeather = (cityCoordinates) => {
-  // console.log('in createWeather, the lat: ' + cityCoordinates.latitude);
-  console.log(cityCoordinates === undefined);
-  const lat = cityCoordinates.latitude;
-  const long = cityCoordinates.longitude;
+  //cityCoordinates is reference to state that was passed through
+  const lat = cityCoordinates.locationToAdd.latitude;
+  const long = cityCoordinates.locationToAdd.longitude;
   const weatherUrl = baseUrl + lat + ',' + long;
+  console.log('weatherUrl in createWeather: ' + weatherUrl);
   return function(dispatch){
     fetch(weatherUrl)
       .then( async response => {

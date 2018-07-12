@@ -1,20 +1,20 @@
+module.exports = {
 
-export const  LasVegas = {
-    latitude: "36.1699",
-    longitude: "115.1398"
-}
+  "LasVegas": {
+      "latitude": "36.1146",
+      "longitude": "-115.1728"
+  },
+  "NewYork": {
+      "latitude": "40.7128",
+      "longitude": "-74.0060"
+  },
+  "Miami": {
+      "latitude": "25.7617",
+      "longitude": "-80.1918"
+  },
+  "LosAngeles": {
+      "latitude": "37.8267",
+      "longitude": "-122.4233"
+  }
 
-export const NewYork = {
-    latitude: "40.7128",
-    longitude: "74.0060"
-}
-
-export const Miami = {
-    latitude: "25.7617",
-    longitude: "80.1918"
-}
-
-export const LosAngeles = {
-    latitude: "37.8267",
-    longitude: "-122.4233"
 }

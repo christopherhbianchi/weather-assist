@@ -18,25 +18,29 @@ export class WeatherBoard extends Component {
   async - "we will be using the await keyword inside this function" - looks different in arrow functions
   await - "dont go down to the next line until this line is done"
   */
+  renderCards = () => {
+    console.log(this.props.weather);
+    return this.props.weather.map( (weather, index) =>
+      <div key={index}>{index}: <WeatherCard weather={weather}/></div>//closes return
+    );
+  }
 
   render(){
     const weatherArr = this.props.weather;
     console.log('in Weatherboard weatherArr: ' + weatherArr);
-    return weatherArr.length > 1 ? <p>Loading...</p> :
+    return weatherArr.length < 1 ? <p>Loading...</p> :
       <div className='weather-board'>
         <h3>WeatherBoard</h3>
         <p>Our Weather:</p>
         {
-          this.props.weather.map( (weather, index) => {
-          return (<div key={index}>{index}: <WeatherCard weather={weather}/></div>);//closes return
-          })
+          this.renderCards()
         }
         <AddWeather />
       </div>
   }//closes render
 }//closes Component
 
-//This weatherboard is going to need actions to add weather,
+//This weatherboard is going to need action creators to load weather,
 //as well as access to the State, for the state's weather array
 const mapStateToProps = (state) => ({
   weather: state.weather
@@ -44,14 +48,12 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   loadWeather: () => dispatch(loadWeather()),
-  createWeather: weather => dispatch(createWeather(weather)),
   destroyWeather: weather => dispatch(destroyWeather(weather)),
   updateWeather: weather => dispatch(updateWeather(weather))
 });
 
 WeatherBoard.propTypes = {
   weather: PropTypes.array,
-  createWeather: PropTypes.func,
   destroyWeather: PropTypes.func,
   updateWeather: PropTypes.func
 };
