@@ -10,7 +10,6 @@ export class AddWeather extends Component {
     super();
     this.state = {
       locationToAdd: CityCoordinates.LasVegas,
-      locationsAdded: { "Los Angeles": "Los Angeles" } //this could be an object of names, with their name again as the value pair
     }
   }//closes constructor
 
@@ -32,16 +31,11 @@ export class AddWeather extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    var addedObj = this.state.locationsAdded; //object of string to string key-value pairs
     var locToAdd = this.state.locationToAdd.name; //name
 
-    if(addedObj[locToAdd]) return; //if the key exists already, do nothing
-
-    const newAddedObj = Object.assign( {}, addedObj);
-    newAddedObj[locToAdd] = locToAdd;
-    this.setState({
-      locationsAdded: newAddedObj
-    }, this.props.createWeather(this.state) );
+    const weatherArr = this.props.weather;//if the key exists already, do nothing
+    const found = this.props.weather.filter(city => city.name === locToAdd);
+    if(!found.length) this.props.createWeather(this.state);
   }//handleSubmit
 
   render(){

@@ -1,14 +1,10 @@
-import decode from 'jwt-decode';
-// import { browserHistory } from 'react-router-dom'; ******************************************************
 import auth0 from 'auth0-js';
-const ID_TOKEN_KEY = 'id_token'; //***
-const ACCESS_TOKEN_KEY = 'access_token'; //***
 
 const CLIENT_ID = '61Y6FwxhypiSI65QnP4bkzGYmnAnWgzi';
-const CLIENT_DOMAIN = 'AUTH0_DOMAIN';
-const REDIRECT = 'http://localhost:3000/callback';
-const SCOPE = 'YOUR_SCOPE';
-const AUDIENCE = 'AUDIENCE_ATTRIBUTE';
+const CLIENT_DOMAIN = 'weather-assist.auth0.com';
+const REDIRECT = 'http://localhost:3000/home';
+const SCOPE = 'read:allweather';
+
 
 const auth = new auth0.WebAuth({
   clientID: CLIENT_ID,
