@@ -1,5 +1,5 @@
 import decode from 'jwt-decode';
-import { browserHistory } from 'react-router';
+// import { browserHistory } from 'react-router-dom'; ******************************************************
 import auth0 from 'auth0-js';
 const ID_TOKEN_KEY = 'id_token'; //***
 const ACCESS_TOKEN_KEY = 'access_token'; //***
@@ -27,10 +27,10 @@ export const login = () => {
 export const logout = () => {
   clearIdToken();
   clearAccessToken();
-  browserHistory.push('/');
+  // browserHistory.push('/'); ******************************************************
 }//logout
 
-export cont requireAuth = (nextState, replace) => {
+export const requireAuth = (nextState, replace) => {
   if(!isLoggedIn()){
     replace({pathname: '/'});
   }
@@ -69,7 +69,7 @@ export const isLoggedIn = () => {
   return !!idToken && !isTokenExpired(idToken);
 }
 
-const getTokenExpirationDate(encodedToken){
+const getTokenExpirationDate = (encodedToken) => {
   const token = decode(encodedToken);
   if(!token.exp) return null;
 

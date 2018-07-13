@@ -12,7 +12,7 @@ export const Routes = (props) => {
   return (
     <div>
       <Route path='/' component={Nav} />
-    <Route exact path='/home' component={Home} />
+      <Route exact path='/home' component={Home} />
     </div>
   );
 
