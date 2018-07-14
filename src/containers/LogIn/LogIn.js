@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { loginUserSuccess } from '../../actions/activeUserActions.js';
 import  { loadUsersSuccess } from '../../actions/usersActions.js';
@@ -33,7 +34,7 @@ export class LogIn extends Component {
     this.setState({ [name]: value });
   }//handleChange
 
-  handleSubmit = event => {
+  handleSubmit = async event => {
     //we need to validate users. not simply add one to the redux store. We need a way to initialize our group
     //of users on page load as well.
     event.preventDefault();
@@ -49,11 +50,12 @@ export class LogIn extends Component {
     if(allUsers[givenUsername]){
       const targetUser = allUsers[givenUsername];
       if(targetUser.password === givenPassword){//if username exists, check password
-        this.props.loginUserSuccess(this.state);
+        await this.props.loginUserSuccess(this.state); //add this user to our activeUser state
+        this.props.history.push('/home'); //move over to the home page.
       }
     }//outer if
     else return(alert('Incorrect username and or password'));
-    
+
   }//handleSubmit
 
   render(){
@@ -61,8 +63,8 @@ export class LogIn extends Component {
       <div>
         <h2>Log In</h2>
         <form>
-          <input type='text' name='username' placeholder='Username' onChange={this.handleChange}/>
-          <input type='text' name='password' placeholder='Password' onChange={this.handleChange}/>
+          <input type='text' name='username' placeholder='Username' onChange={this.handleChange}/><br/>
+          <input type='text' name='password' placeholder='Password' onChange={this.handleChange}/><br/>
           <button onClick={this.handleSubmit}>Log In</button>
       </form>
       </div>
@@ -78,4 +80,4 @@ const mapDispatchToProps = (dispatch) => ({
   loadUsersSuccess: usersObj => dispatch(loadUsersSuccess(usersObj))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(LogIn);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(LogIn));

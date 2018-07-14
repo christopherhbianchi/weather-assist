@@ -14,7 +14,7 @@ export const Routes = (props) => {
     <div>
       <Route path='/' component={Nav} />
       <Route exact path='/home' component={Home} />
-    <Route exact path='/login' component={LogIn} />
+      <Route exact path='/login' component={LogIn} />
     </div>
   );
 

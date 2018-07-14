@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import './Nav.css';
 //import components below
-import { logout, login } from '../../utils/Auth.js';
+import { logoutUserSuccess } from '../../actions/activeUserActions.js';
 
 
 class Nav extends Component {
@@ -15,17 +15,26 @@ class Nav extends Component {
   }
 
   render(){
+    const activeUser = this.props.activeUser; //this is always an object. Always truthy
+    const keys = Object.keys(activeUser);
+    console.log(keys.length);
     return(
       <nav className='nav-bar'>
         <NavLink className='nav-link' to='/home'>Home</NavLink>
-        <NavLink className='nav-link' to='/login'>Log In</NavLink>  
+      { keys.length === 2 ? <NavLink className='nav-link' to='/login' onClick={ e => {e.preventDefault(); this.props.logoutUserSuccess();} }>Log Out</NavLink> : null }
       </nav>
     );//closes return
   }//closes render
 
 }
-//<button onClick={ (e) =>{ e.preventDefault(); logout();} }>Log Out</button>
-//<button onClick={ (e) =>{ e.preventDefault(); login();} }>Log In</button>
 
+const mapStateToProps = state => ({
+  //needs the active user
+  activeUser: state.activeUser
+});
+const mapDispatchToProps = dispatch => ({
+  //needs the logout action
+  logoutUserSuccess: () => dispatch(logoutUserSuccess())
+});
 
-export default Nav;
+export default connect(mapStateToProps, mapDispatchToProps)(Nav);
