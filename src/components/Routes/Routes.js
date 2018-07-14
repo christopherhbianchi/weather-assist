@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 //import needed components below
 import Nav from '../../containers/Nav/Nav.js';
 import Home from '../../containers/Home/Home.js';
+import LogIn from '../../containers/LogIn/LogIn.js';
 
 export const Routes = (props) => {
 
@@ -13,6 +14,7 @@ export const Routes = (props) => {
     <div>
       <Route path='/' component={Nav} />
       <Route exact path='/home' component={Home} />
+    <Route exact path='/login' component={LogIn} />
     </div>
   );
 

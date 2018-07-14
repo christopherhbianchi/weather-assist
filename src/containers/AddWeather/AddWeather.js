@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './AddWeather.css';
 //import components below
-import { createWeather } from '../../actions/index.js';
+import { createWeather } from '../../actions/weatherActions.js';
 const CityCoordinates = require('../../resources/CityCoordinates.js');
 
 export class AddWeather extends Component {

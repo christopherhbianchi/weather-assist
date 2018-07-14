@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { loadWeather, createWeather, destroyWeatherSuccess, updateWeather } from '../../actions/index.js';
+import { loadWeather, createWeather, destroyWeatherSuccess, updateWeather } from '../../actions/weatherActions.js';
 //import components here
 import WeatherCard from '../../components/WeatherCard/WeatherCard.js';
 import AddWeather from '../AddWeather/AddWeather.js';

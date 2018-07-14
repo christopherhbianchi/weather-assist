@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import './Nav.css';
 //import components below
-import { login, logout, isLoggedIn } from '../../utils/AuthService.js';
+import { logout, login } from '../../utils/Auth.js';
+
 
 class Nav extends Component {
 
@@ -17,21 +18,14 @@ class Nav extends Component {
     return(
       <nav className='nav-bar'>
         <NavLink className='nav-link' to='/home'>Home</NavLink>
+        <NavLink className='nav-link' to='/login'>Log In</NavLink>  
       </nav>
     );//closes return
   }//closes render
 
 }
+//<button onClick={ (e) =>{ e.preventDefault(); logout();} }>Log Out</button>
+//<button onClick={ (e) =>{ e.preventDefault(); login();} }>Log In</button>
 
-/*
-{
-    ( isLoggedIn() ) ? <NavLink className='nav-link' to='/home'>Home</NavLink> : null
-}
-{
-  ( isLoggedIn()) ? ( <button className="btn btn-danger log" onClick={() => logout()}>Log out </button> )
-  : ( <button className="btn btn-info log" onClick={() => login()}>Log In</button> )
-}
-
-*/
 
 export default Nav;
