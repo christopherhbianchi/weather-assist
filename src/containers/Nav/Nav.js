@@ -7,33 +7,32 @@ import './Nav.css';
 import { logoutUserSuccess } from '../../actions/activeUserActions.js';
 
 
-class Nav extends Component {
+export class Nav extends Component {
 
-  constructor(){
-    super();
-    this.state = {};
+
+  handleLogout = async (event) => {
+    event.preventDefault();
+    await this.props.logoutUserSuccess();
+    await this.props.history.push('/login');
   }
 
   render(){
     const activeUser = this.props.activeUser; //this is always an object. Always truthy
-    const keys = Object.keys(activeUser);
-    console.log(keys.length);
     return(
       <nav className='nav-bar'>
         <NavLink className='nav-link' to='/home'>Home</NavLink>
-      { keys.length === 2 ? <NavLink className='nav-link' to='/login' onClick={ e => {e.preventDefault(); this.props.logoutUserSuccess();} }>Log Out</NavLink> : null }
+        { activeUser['username'] !== 'inactive' ? <NavLink className='nav-link' to='/login' onClick={this.handleLogout}>Log Out</NavLink> : null }
       </nav>
     );//closes return
   }//closes render
+}//Nav
 
-}
-
-const mapStateToProps = state => ({
-  //needs the active user
+//needs the active user
+const mapStateToProps = (state) => ({
   activeUser: state.activeUser
 });
-const mapDispatchToProps = dispatch => ({
-  //needs the logout action
+//needs the logout action
+const mapDispatchToProps = (dispatch) => ({
   logoutUserSuccess: () => dispatch(logoutUserSuccess())
 });
 

@@ -7,5 +7,9 @@ export const loginUserSuccess = user => {
 }//loginUserSuccess
 
 export const logoutUserSuccess = () => {
-  type:'LOGOUT_USER_SUCCESS'
+  return { type:'LOGOUT_USER_SUCCESS' }
 }//logoutUserSuccess
+
+export const initializeActiveUserSuccess = () => {
+  return { type:'INITIALIZE_ACTIVE_USER_SUCCESS' }
+}

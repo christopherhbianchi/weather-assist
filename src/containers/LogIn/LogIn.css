@@ -1,0 +1,15 @@
+#logInButton{
+  border: solid;
+  border-color: #42bcf4;
+  padding: 5px 15px;
+  border-radius: 25px;
+}
+#logInButton:hover{
+  background-color: #42bcf4;
+  color: white;
+  transition-duration: 0.4s;
+}
+
+#logInBumper{
+    padding: 2px 2px;
+}

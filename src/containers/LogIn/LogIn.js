@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { loginUserSuccess } from '../../actions/activeUserActions.js';
+import { loginUserSuccess, initializeActiveUserSuccess } from '../../actions/activeUserActions.js';
 import  { loadUsersSuccess } from '../../actions/usersActions.js';
+import './LogIn.css';
 //import components here
 const users = require('../../resources/SeedUsers.js'); //object of objects
 
@@ -21,6 +22,7 @@ export class LogIn extends Component {
   async componentDidMount(){
     //making sure all our users have been seeded prior to anything else
     await this.props.loadUsersSuccess(this.seedData());
+    await this.props.initializeActiveUserSuccess();
   }
   seedData = () => { //seed data from hard coded data
     let usersToSeed = {};
@@ -65,7 +67,8 @@ export class LogIn extends Component {
         <form>
           <input type='text' name='username' placeholder='Username' onChange={this.handleChange}/><br/>
           <input type='text' name='password' placeholder='Password' onChange={this.handleChange}/><br/>
-          <button onClick={this.handleSubmit}>Log In</button>
+          <div id='logInBumper'></div>
+          <button id='logInButton' onClick={this.handleSubmit}>Log In</button>
       </form>
       </div>
     );//return
@@ -77,7 +80,8 @@ const mapStateToProps = (state) => ({
 });
 const mapDispatchToProps = (dispatch) => ({
   loginUserSuccess: user => dispatch(loginUserSuccess(user)),
-  loadUsersSuccess: usersObj => dispatch(loadUsersSuccess(usersObj))
+  loadUsersSuccess: usersObj => dispatch(loadUsersSuccess(usersObj)),
+  initializeActiveUserSuccess: () => dispatch(initializeActiveUserSuccess())
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(LogIn));
