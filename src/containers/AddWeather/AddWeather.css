@@ -1,13 +1,44 @@
 .add-weather {
-  background: #4286f4;
+  box-shadow: 10px 15px 17px #0e0e0e;
+  width: 280px;
+  background: #345fa5;
   color: white;
-  border-radius: 25px;
+  border-radius: 8px;
   padding-top: 5px;
-  padding-bottom: 15px;
+  padding-bottom: 30px;
+  margin: auto;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.bannerAddWeather{
+  text-align: center;
+  color: #e7e8e8;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 20px;
 }
 
 .select{
-  border: 1px solid #ccc;
+  border: none;
+  height: 25px;
+  margin-bottom: 12px;
+  color: #1a2c4a;
+  background: #c3d6f6;
+  width: 89px;
+}
+
+.addCityButton{
+  border: none;
+  height: 25px;
+  border-radius: 3px;
+  width: 90px;
+}
+
+.addCityForm{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 button:hover{

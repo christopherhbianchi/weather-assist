@@ -5,14 +5,14 @@ img{
   max-width: 30%;
 }
 .weather-card{
-  background: #42bcf4;
+  background: #43484a;
   color: white;
-  border-radius: 25px;
+  border-radius: 10px;
   padding-top: 5px;
   padding-bottom: 15px;
   max-width: 50%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+  box-shadow: 8px 18px 47px #0e0e0e;
 }
 p{
   font-size: 12px;

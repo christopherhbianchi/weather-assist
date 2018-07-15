@@ -1,18 +1,17 @@
 .weather-board {
-  background: #4286f4;
+  box-shadow: 10px 15px 17px #0e0e0e;
+  width: 410px;
+  background: #345fa5;
   color: white;
-  border-radius: 25px;
+  border-radius: 8px;
   padding-top: 5px;
-  padding-bottom: 15px;
+  padding-bottom: 30px;
+  margin: auto;
+  margin-bottom: 40px;
+  text-align: center;
 }
 .weather-card-bumper{
   padding: 15px 15px;
-}
-
-button{
-  border: none;
-  padding: 5px 15px;
-  border-radius: 25px;
 }
 button:hover{
   background-color: #42bcf4;

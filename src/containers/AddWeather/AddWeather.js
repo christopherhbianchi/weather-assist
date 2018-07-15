@@ -41,15 +41,15 @@ export class AddWeather extends Component {
   render(){
     return(
       <div className='add-weather'>
-        <h3>AddWeather Container</h3>
-        <form>
+        <h3 className='bannerAddWeather'>AddWeather Container</h3>
+      <form className='addCityForm'>
           <select className='select' onChange={this.handleChange}>
             <option value='LasVegas'>Las Vegas</option>
             <option value='NewYork'>New York</option>
             <option value='Miami'>Miami</option>
             <option value='LosAngeles'>Los Angeles</option>
           </select>
-          <button onClick={this.handleSubmit}>Add this city</button>
+          <button className='addCityButton' onClick={this.handleSubmit}>Add this city</button>
         </form>
       </div>
     );//closes return

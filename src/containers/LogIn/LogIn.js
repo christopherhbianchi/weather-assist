@@ -22,7 +22,6 @@ export class LogIn extends Component {
   async componentDidMount(){
     //making sure all our users have been seeded prior to anything else
     await this.props.loadUsersSuccess(this.seedData());
-    await this.props.initializeActiveUserSuccess();
   }
   seedData = () => { //seed data from hard coded data
     let usersToSeed = {};
@@ -63,10 +62,10 @@ export class LogIn extends Component {
   render(){
     return(
       <div>
-        <h2>Log In</h2>
-        <form>
-          <input type='text' name='username' placeholder='Username' onChange={this.handleChange}/><br/>
-          <input type='text' name='password' placeholder='Password' onChange={this.handleChange}/><br/>
+        <h2 className='banner'>WEATHER ASSIST</h2>
+          <form className='logInForm'>
+          <input className='selectBox' type='text' name='username' placeholder='Username' onChange={this.handleChange}/><br/>
+          <input className='selectBox' type='text' name='password' placeholder='Password' onChange={this.handleChange}/><br/>
           <div id='logInBumper'></div>
           <button id='logInButton' onClick={this.handleSubmit}>Log In</button>
       </form>
@@ -80,8 +79,8 @@ const mapStateToProps = (state) => ({
 });
 const mapDispatchToProps = (dispatch) => ({
   loginUserSuccess: user => dispatch(loginUserSuccess(user)),
-  loadUsersSuccess: usersObj => dispatch(loadUsersSuccess(usersObj)),
-  initializeActiveUserSuccess: () => dispatch(initializeActiveUserSuccess())
+  loadUsersSuccess: usersObj => dispatch(loadUsersSuccess(usersObj))
+  // initializeActiveUserSuccess: () => dispatch(initializeActiveUserSuccess())
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(LogIn));

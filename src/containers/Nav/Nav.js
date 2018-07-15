@@ -13,7 +13,7 @@ export class Nav extends Component {
   handleLogout = async (event) => {
     event.preventDefault();
     await this.props.logoutUserSuccess();
-    await this.props.history.push('/login');
+    await this.props.history.push('/');
   }
 
   render(){
@@ -21,7 +21,7 @@ export class Nav extends Component {
     return(
       <nav className='nav-bar'>
         <NavLink className='nav-link' to='/home'>Home</NavLink>
-        { activeUser['username'] !== 'inactive' ? <NavLink className='nav-link' to='/login' onClick={this.handleLogout}>Log Out</NavLink> : null }
+        <NavLink className='nav-link' to='/' onClick={this.handleLogout}>Log Out</NavLink>
       </nav>
     );//closes return
   }//closes render
