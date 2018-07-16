@@ -1,8 +1,11 @@
 import React from 'react';
+import './NotFound.css';
 
 export const NotFound = props => {
   return(
-    <h2>Resource not found.</h2>
+    <div>
+      <h2 className='notFoundMessage'>Resource not found.</h2>
+    </div>
   );
 };
 

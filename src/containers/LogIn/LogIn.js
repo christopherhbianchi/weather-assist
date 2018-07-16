@@ -80,7 +80,6 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   loginUserSuccess: user => dispatch(loginUserSuccess(user)),
   loadUsersSuccess: usersObj => dispatch(loadUsersSuccess(usersObj))
-  // initializeActiveUserSuccess: () => dispatch(initializeActiveUserSuccess())
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(LogIn));

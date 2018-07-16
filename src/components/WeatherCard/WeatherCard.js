@@ -1,21 +1,49 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './WeatherCard.css'
 
 
-const WeatherCard = (props) => {
+class WeatherCard extends Component {
 
-  // constImageUrl =
-  return(
-    <div className='weather-card'>
-      <h4>{props.weather.name}</h4>
-      <img src={require('../../resources/images/sun.png')}/>
-      <p>{props.weather.currently.summary}</p>
-      <p>{props.weather.currently.temperature}° F</p>
-      <p>Wind Speed: {props.weather.currently.windSpeed} mph</p>
-      <p>Chance of Rain: {props.weather.currently.precipProbability}%</p>
-    </div>
-  );//closes return
+  weatherImage = () => {
+    let summary = this.props.weather.currently.summary;
+    switch (summary) {
+      case 'Clear':
+        return 'clear'
+      case 'Humid and Partly Cloudy':
+        return 'partlycloudy';
+      case 'Partly Cloudy':
+        return 'partlycloudy';
+      case 'Humid and Mostly Cloudy':
+        return 'mostlycloudy';
+      case 'Mostly Cloudy':
+        return 'mostlycloudy';
+      case 'Cloudy':
+        return 'cloudy';
+      case 'Drizzle':
+        return 'rain';
+      case 'Fog':
+        return 'fog';
+      default:
+        return 'unknown';
+  }
 }
+
+  render() {
+    return(
+      <div className='weather-card'>
+        <button
+          className='remove-button'
+          onClick={ e => {e.preventDefault(); this.props.removeCard(this.props.weather)}}/>
+        <h4 className='cityName'>{this.props.weather.name}</h4>
+        <img src={require(`../../assets/currentWeather/icons/${this.weatherImage()}.svg`)}/>
+        <p>{this.props.weather.currently.summary}</p>
+        <p>{this.props.weather.currently.temperature}° F</p>
+        <p>Wind Speed: {this.props.weather.currently.windSpeed} mph</p>
+        <p>Chance of Rain: {this.props.weather.currently.precipProbability}%</p>
+      </div>
+    );//closes return
+  }//closes render
+}//class
 
 
 export default WeatherCard;

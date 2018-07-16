@@ -41,7 +41,7 @@ export class AddWeather extends Component {
   render(){
     return(
       <div className='add-weather'>
-        <h3 className='bannerAddWeather'>AddWeather Container</h3>
+        <h3 className='bannerAddWeather'>Select City</h3>
       <form className='addCityForm'>
           <select className='select' onChange={this.handleChange}>
             <option value='LasVegas'>Las Vegas</option>

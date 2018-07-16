@@ -1,6 +1,7 @@
 .App {
   background: #1e1e1e;
-  height: 100vw;
+  min-height: 100vh;
+  height: 100%;
 }
 
 .App-logo {

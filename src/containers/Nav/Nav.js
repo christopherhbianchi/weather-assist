@@ -20,8 +20,8 @@ export class Nav extends Component {
     const activeUser = this.props.activeUser; //this is always an object. Always truthy
     return(
       <nav className='nav-bar'>
-        <NavLink className='nav-link' to='/home'>Home</NavLink>
-        <NavLink className='nav-link' to='/' onClick={this.handleLogout}>Log Out</NavLink>
+        <NavLink className='nav-link' to='/home'>WEATHER ASSIST</NavLink>
+      <NavLink className='nav-link' to='/' onClick={this.handleLogout}>LOG OUT</NavLink>
       </nav>
     );//closes return
   }//closes render

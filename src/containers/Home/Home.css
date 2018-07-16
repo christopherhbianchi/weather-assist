@@ -2,3 +2,11 @@
   padding-top: 5px;
   padding-bottom: 5px;
 }
+.homeTitle{
+  text-align: center;
+  font-size: 32px;
+  color: #d7e5fd;
+  margin: 29px;
+  text-shadow: 6px 8px 13px #0a0a0a;
+  font-weight: 400;
+}

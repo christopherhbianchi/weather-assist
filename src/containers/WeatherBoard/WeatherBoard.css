@@ -18,3 +18,25 @@ button:hover{
   color: white;
   transition-duration: 0.4s;
 }
+.weatherBoardHeader{
+  text-align: center;
+  color: #e7e8e8;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 20px;
+}
+
+.noWeatherCards{
+  box-shadow: 10px 15px 17px #0e0e0e;
+  width: 410px;
+  background: #345fa5;
+  color: #e7e8e8;
+  font-size: 18px;
+  font-weight: 300;
+  border-radius: 8px;
+  padding-top: 5px;
+  padding-bottom: 30px;
+  margin: auto;
+  margin-bottom: 40px;
+  text-align: center;
+}
