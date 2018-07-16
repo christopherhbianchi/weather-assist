@@ -59,8 +59,3 @@ export const createWeather = (cityCoordinates) => {
       })
   }//closes function
 }//closes createWeather
-
-//may have to do with having the thing make a request every 5 mins or so
-export const updateWeather = () => {
-
-}

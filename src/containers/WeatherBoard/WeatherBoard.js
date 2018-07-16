@@ -51,8 +51,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   loadWeather: () => dispatch(loadWeather()),
-  destroyWeatherSuccess: weather => dispatch(destroyWeatherSuccess(weather)),
-  updateWeather: weather => dispatch(updateWeather(weather))
+  destroyWeatherSuccess: weather => dispatch(destroyWeatherSuccess(weather))
 });
 
 WeatherBoard.propTypes = {

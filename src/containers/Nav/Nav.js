@@ -21,7 +21,7 @@ export class Nav extends Component {
     return(
       <nav className='nav-bar'>
         <NavLink className='nav-link' to='/home'>WEATHER ASSIST</NavLink>
-      <NavLink className='nav-link' to='/' onClick={this.handleLogout}>LOG OUT</NavLink>
+      <NavLink className='nav-link-logout' to='/' onClick={this.handleLogout}>LOG OUT</NavLink>
       </nav>
     );//closes return
   }//closes render
