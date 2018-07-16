@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { loginUserSuccess, initializeActiveUserSuccess } from '../../actions/activeUserActions.js';
-import  { loadUsersSuccess } from '../../actions/usersActions.js';
+import  { loadUsersSuccess, registerUserSuccess } from '../../actions/usersActions.js';
 import './LogIn.css';
 //import components here
 const users = require('../../resources/SeedUsers.js'); //object of objects
@@ -35,7 +35,7 @@ export class LogIn extends Component {
     this.setState({ [name]: value });
   }//handleChange
 
-  handleSubmit = async event => {
+  handleLogIn = async event => {
     //we need to validate users. not simply add one to the redux store. We need a way to initialize our group
     //of users on page load as well.
     event.preventDefault();
@@ -56,8 +56,23 @@ export class LogIn extends Component {
       }
     }//outer if
     else return(alert('Incorrect username and or password'));
-
   }//handleSubmit
+
+  handleRegister = async event => {
+    event.preventDefault();
+    const allUsers = this.props.users;
+    const givenUsername = this.state.username;
+    const givenPassword = this.state.password;
+
+    if(allUsers[givenUsername]) return alert('Registered user already exists');
+    else{
+      await this.props.registerUserSuccess(this.state);
+      await this.props.loginUserSuccess(this.state);
+      this.props.history.push('/home');
+    }//else
+  }//handleRegister
+
+
 
   render(){
     return(
@@ -66,8 +81,10 @@ export class LogIn extends Component {
           <form className='logInForm'>
           <input className='selectBox' type='text' name='username' placeholder='Username' onChange={this.handleChange}/><br/>
           <input className='selectBox' type='text' name='password' placeholder='Password' onChange={this.handleChange}/><br/>
-          <div id='logInBumper'></div>
-          <button id='logInButton' onClick={this.handleSubmit}>Log In</button>
+          <div className='logInBumper'></div>
+          <button className='logInButtons' onClick={this.handleLogIn}>Log In</button>
+          <div className='logInBumper'></div>
+          <button className='logInButtons' onClick={this.handleRegister}>Register</button>
       </form>
       </div>
     );//return
@@ -79,7 +96,8 @@ const mapStateToProps = (state) => ({
 });
 const mapDispatchToProps = (dispatch) => ({
   loginUserSuccess: user => dispatch(loginUserSuccess(user)),
-  loadUsersSuccess: usersObj => dispatch(loadUsersSuccess(usersObj))
+  loadUsersSuccess: usersObj => dispatch(loadUsersSuccess(usersObj)),
+  registerUserSuccess: user => dispatch(registerUserSuccess(user))
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(LogIn));

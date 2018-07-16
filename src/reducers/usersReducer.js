@@ -7,6 +7,14 @@ export const usersReducer = (state = {}, action) => {
       newState = action.payload; //payload is the object of objects
       return newState;
     }
+    case 'REGISTER_USER_SUCCESS':{
+      let newUser = action.payload;
+      let newState = Object.assign({}, state);
+      console.log('Users reducer, newUser: ' + newUser);
+      console.log('Users reducer, newUser: ' + newUser.username);
+      newState[newUser.username] = newUser.password;
+      return newState;
+    }
     default:
       return state;
   }//switch

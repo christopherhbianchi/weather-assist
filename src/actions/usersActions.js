@@ -5,3 +5,8 @@ export const loadUsersSuccess = (usersObj) => {
     payload: usersObj
   }//return
 }//loadUsersSuccess
+
+export const registerUserSuccess = user => ({
+  type: 'REGISTER_USER_SUCCESS',
+  payload: user
+});

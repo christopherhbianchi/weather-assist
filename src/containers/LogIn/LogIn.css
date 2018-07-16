@@ -1,4 +1,4 @@
-#logInButton{
+.logInButtons{
   border: none;
   background: #5785a7;
   width: 122px;
@@ -6,7 +6,7 @@
   padding: 5px 15px;
   border-radius: 25px;
 }
-#logInButton:hover{
+.logInButtons:hover{
   background-color: #42bcf4;
   color: white;
   transition-duration: 0.4s;
@@ -26,7 +26,7 @@
   font-size: 40px;
   font-weight: 100;
 }
-#logInBumper{
+.logInBumper{
     padding: 2px 2px;
 }
 .logInForm{
