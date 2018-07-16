@@ -1,4 +1,4 @@
-import weatherReducer from '../weatherReducer.js';
+import { weatherReducer } from '../weatherReducer.js';
 import * as actions from '../../actions/weatherActions.js';
 
 
