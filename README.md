@@ -1,7 +1,7 @@
 # Weather Assist
 
 ## Overview
-Weather Assist is a personalized online hub designed to allow users to view the weather of desired cities around the world.
+Weather Assist is a personalized online hub designed to allow users to view the weather of desired cities around the world. This is a front-end application which utilizes React, Redux, and more, to access the Dark Sky Weather API to load the current weather of a location based on latitude and longitude.
 
 
 ## Core Functionality
