@@ -4,11 +4,6 @@ export const activeUserReducer = ( state={}, action) =>{
       return action.payload;
     case 'LOGOUT_USER_SUCCESS':
       return {};  
-    case 'INITIALIZE_ACTIVE_USER_SUCCESS':
-      return Object.assign({}, {
-        "username": "inactive",
-        "password": "inactive"
-      });
     default:
       return state;
   }
