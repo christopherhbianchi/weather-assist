@@ -9,7 +9,7 @@ export class AddWeather extends Component {
   constructor(){
     super();
     this.state = {
-      locationToAdd: CityCoordinates.LasVegas,
+      locationToAdd: CityCoordinates.LasVegas
     }
   }//closes constructor
 

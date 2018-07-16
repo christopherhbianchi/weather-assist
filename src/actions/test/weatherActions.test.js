@@ -50,7 +50,7 @@ describe('weatherActions and weatherAction Creators', () => {
 
 
   //************************ Action Creator Fetch Requests **********************
-  describe('weatherAction creator fetch requests', () => {
+  describe('weatherAction action creator fetch requests', () => {
 
     const losAngelesUrl = 'https://api.darksky.net/forecast/33b9d25191f4ef8de9ee678ec256fcb4/37.8267,-122.4233';
 

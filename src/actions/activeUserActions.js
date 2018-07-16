@@ -9,7 +9,3 @@ export const loginUserSuccess = user => {
 export const logoutUserSuccess = () => {
   return { type:'LOGOUT_USER_SUCCESS' }
 }//logoutUserSuccess
-
-export const initializeActiveUserSuccess = () => {
-  return { type:'INITIALIZE_ACTIVE_USER_SUCCESS' }
-}
