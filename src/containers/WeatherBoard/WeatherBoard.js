@@ -5,7 +5,7 @@ import { loadWeather, createWeather, destroyWeatherSuccess, updateWeather } from
 //import components here
 import WeatherCard from '../../components/WeatherCard/WeatherCard.js';
 import AddWeather from '../AddWeather/AddWeather.js';
-import './WeatherBoard.css'
+import './WeatherBoard.css';
 
 
 export class WeatherBoard extends Component {
@@ -25,7 +25,7 @@ export class WeatherBoard extends Component {
       <div key={index}>
         <WeatherCard weather={weather} removeCard={this.removeCard}/>
         <div className='bumper'></div>
-      <div className='weather-card-bumper'></div>
+        <div className='weather-card-bumper'></div>
       </div>
     );//closes return
   }//closes renderCards
@@ -39,7 +39,7 @@ export class WeatherBoard extends Component {
         {
           this.renderCards()
         }
-      </div>
+      </div>;
   }//closes render
 }//closes Component
 
@@ -56,8 +56,8 @@ const mapDispatchToProps = (dispatch) => ({
 
 WeatherBoard.propTypes = {
   weather: PropTypes.array,
-  destroyWeather: PropTypes.func,
-  updateWeather: PropTypes.func
+  loadWeather: PropTypes.func,
+  destroyWeatherSuccess: PropTypes.func
 };
 
 

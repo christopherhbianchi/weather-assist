@@ -9,21 +9,21 @@ export function loadWeatherSuccess(weather){
   return {
     type: 'LOAD_WEATHER_SUCCESS',
     payload: weather
-  }
+  };
 }//closes loadWeatherSuccess
 
 export function createWeatherSuccess(weather){
   return {
     type: 'CREATE_WEATHER_SUCCESS',
     payload: weather
-  }
+  };
 }//closes createWeatherSuccess
 
 export function destroyWeatherSuccess(weather){
   return {
     type: 'DESTROY_WEATHER_SUCCESS',
     payload: weather
-  }
+  };
 }//closes destroyWeatherSuccess
 
 
@@ -37,9 +37,9 @@ export const loadWeather = () => {
         const weather = await response.json();
         weather.name = "Los Angeles";
         await dispatch(loadWeatherSuccess(weather));
-      })
-  }//closes function
-}//closes loadWeather
+      });
+  };//closes function
+};//closes loadWeather
 
 
 export const createWeather = (cityCoordinates) => {
@@ -56,6 +56,6 @@ export const createWeather = (cityCoordinates) => {
         const weather = await response.json();
         weather.name = cityName;
         await dispatch(createWeatherSuccess(weather));
-      })
-  }//closes function
-}//closes createWeather
+      });
+  };//closes function
+};//closes createWeather

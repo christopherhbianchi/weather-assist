@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallopw } from 'enzyme';
+import { shallow } from 'enzyme';
 import WeatherCard from './WeatherCard.js';
 
 describe('<WeatherCard />', () => {

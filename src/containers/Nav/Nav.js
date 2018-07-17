@@ -18,10 +18,10 @@ export class Nav extends Component {
 
   render(){
     const activeUser = this.props.activeUser; //this is always an object. Always truthy
-    return(
+    return (
       <nav className='nav-bar'>
         <NavLink className='nav-link' to='/home'>WEATHER ASSIST</NavLink>
-      <NavLink className='nav-link-logout' to='/' onClick={this.handleLogout}>LOG OUT</NavLink>
+        <NavLink className='nav-link-logout' to='/' onClick={this.handleLogout}>LOG OUT</NavLink>
       </nav>
     );//closes return
   }//closes render
@@ -35,5 +35,10 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   logoutUserSuccess: () => dispatch(logoutUserSuccess())
 });
+
+Nav.propTypes = {
+  logoutUserSuccess: PropTypes.func,
+  activeUser: PropTypes.object
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Nav);

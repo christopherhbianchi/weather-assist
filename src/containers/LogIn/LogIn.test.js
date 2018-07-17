@@ -14,14 +14,14 @@ describe('<LogIn />', () => {
       username: '',
       password: ''
     };
-    expect(renderedComponent,state()).toEqual(expected);
+    expect(renderedComponent.state()).toEqual(expected);
   });//it
 
   it('should map the store correctly', () => {
     const mockStore = { users: {} };
     const mapped = mapStateToProps(mockStore);
     expect(mapped).toEqual(mockStore);
-  })
+  });
 
   it('should dispatch loginUserSuccess', () => {
     const mockDispatch = jest.fn();

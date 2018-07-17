@@ -16,20 +16,19 @@ class Routes extends Component {
   render() {
     return (
       (!this.props.activeUser.username) ?
-       <Switch>
-         <Route exact path='/' component={LogIn} />
-         <Route component={NotFound} />
-      </Switch>
-      :
-      <div>
-        <Route path='/' component={Nav} />
         <Switch>
-          <Route exact path='/home' component={Home} />
+          <Route exact path='/' component={LogIn} />
           <Route component={NotFound} />
         </Switch>
-      </div>
-
-    )//return
+        :
+        <div>
+          <Route path='/' component={Nav} />
+          <Switch>
+            <Route exact path='/home' component={Home} />
+            <Route component={NotFound} />
+          </Switch>
+        </div>
+    );//return
   }
 }
 

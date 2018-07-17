@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './AddWeather.css';
+import PropTypes from 'prop-types';
 //import components below
 import { createWeather } from '../../actions/weatherActions.js';
 const CityCoordinates = require('../../resources/CityCoordinates.js');
@@ -10,7 +11,7 @@ export class AddWeather extends Component {
     super();
     this.state = {
       locationToAdd: CityCoordinates.LasVegas
-    }
+    };
   }//closes constructor
 
   handleChange = async (event) => {
@@ -42,7 +43,7 @@ export class AddWeather extends Component {
     return(
       <div className='add-weather'>
         <h3 className='bannerAddWeather'>Select City</h3>
-      <form className='addCityForm'>
+        <form className='addCityForm'>
           <select className='select' onChange={this.handleChange}>
             <option value='LasVegas'>Las Vegas</option>
             <option value='NewYork'>New York</option>
@@ -63,5 +64,10 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   createWeather: cityCoordinates => dispatch(createWeather(cityCoordinates))
 });
+
+AddWeather.PropTypes = {
+  weather: PropTypes.obj,
+  createWeather: PropTypes.func
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddWeather);

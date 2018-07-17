@@ -14,13 +14,13 @@ export class Home extends Component {
   }
 
   render(){
-    return(
+    return (
       <div>
         <AddWeather />
         <WeatherBoard />
       </div>
     );//closes return
-  };//closes render
+  }//closes render
 }
 
 //mapStateToProps

@@ -1,10 +1,10 @@
 //****************************** Actions
 export const loadUsersSuccess = (usersObj) => {
-  return{
+  return {
     type: 'LOAD_USERS_SUCCESS',
     payload: usersObj
-  }//return
-}//loadUsersSuccess
+  };//return
+};//loadUsersSuccess
 
 export const registerUserSuccess = user => ({
   type: 'REGISTER_USER_SUCCESS',

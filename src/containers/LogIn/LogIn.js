@@ -100,4 +100,11 @@ const mapDispatchToProps = (dispatch) => ({
   registerUserSuccess: user => dispatch(registerUserSuccess(user))
 });
 
+LogIn.propTypes = {
+  users: PropTypes.object,
+  loadUsersSuccess: PropTypes.func,
+  registerUserSuccess: PropTypes.func,
+  loginUsersSuccess: PropTypes.func
+};
+
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(LogIn));

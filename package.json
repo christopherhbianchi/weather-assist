@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "ajv": "^6.5.2",
-    "auth0-js": "^9.6.1",
     "jwt-decode": "^2.2.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
@@ -22,10 +21,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "eslint": "./node_modules/eslint/bin/eslint.js ./src/*.js ./src/components/*/*.js ./src/containers/*/*.js",
+    "eslint:watch": "npm run eslint -- --watch"
   },
   "devDependencies": {
     "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^5.0.1",
     "eslint-plugin-react": "^7.10.0",
     "jest": "^23.4.1",
