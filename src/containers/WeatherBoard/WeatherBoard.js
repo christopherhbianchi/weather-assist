@@ -20,7 +20,6 @@ export class WeatherBoard extends Component {
   }
 
   renderCards = () => {
-    console.log(this.props.weather);
     return this.props.weather.map( (weather, index) =>
       <div key={index}>
         <WeatherCard weather={weather} removeCard={this.removeCard}/>

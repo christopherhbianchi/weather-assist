@@ -50,8 +50,6 @@ export const createWeather = (cityCoordinates) => {
   const cityName = cityCoordinates.locationToAdd.name;
   const weatherUrl = baseUrl + lat + ',' + long;
 
-  console.log('weatherUrl in createWeather: ' + weatherUrl);
-
   return function(dispatch){
     fetch(weatherUrl)
       .then( async response => {

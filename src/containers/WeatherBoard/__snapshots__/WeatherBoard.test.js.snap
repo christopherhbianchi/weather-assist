@@ -1,0 +1,279 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<WeatherBoard /> should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <WeatherBoard
+    loadWeather={[Function]}
+    weather={
+        Array [
+            Object {
+              "currently": Object {
+                "temperature": 70,
+              },
+              "name": "Los Angeles",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3
+          className="weatherBoardHeader"
+>
+          Current Weather
+</h3>,
+        Array [
+          <div>
+            <WeatherCard
+                        removeCard={[Function]}
+                        weather={
+                                    Object {
+                                                "currently": Object {
+                                                  "temperature": 70,
+                                                },
+                                                "name": "Los Angeles",
+                                              }
+                        }
+            />
+            <div
+                        className="bumper"
+            />
+            <div
+                        className="weather-card-bumper"
+            />
+</div>,
+        ],
+      ],
+      "className": "weather-board",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Current Weather",
+          "className": "weatherBoardHeader",
+        },
+        "ref": null,
+        "rendered": "Current Weather",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <WeatherCard
+              removeCard={[Function]}
+              weather={
+                            Object {
+                                          "currently": Object {
+                                            "temperature": 70,
+                                          },
+                                          "name": "Los Angeles",
+                                        }
+              }
+/>,
+            <div
+              className="bumper"
+/>,
+            <div
+              className="weather-card-bumper"
+/>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "removeCard": [Function],
+              "weather": Object {
+                "currently": Object {
+                  "temperature": 70,
+                },
+                "name": "Los Angeles",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "bumper",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "weather-card-bumper",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3
+            className="weatherBoardHeader"
+>
+            Current Weather
+</h3>,
+          Array [
+            <div>
+              <WeatherCard
+                            removeCard={[Function]}
+                            weather={
+                                          Object {
+                                                        "currently": Object {
+                                                          "temperature": 70,
+                                                        },
+                                                        "name": "Los Angeles",
+                                                      }
+                            }
+              />
+              <div
+                            className="bumper"
+              />
+              <div
+                            className="weather-card-bumper"
+              />
+</div>,
+          ],
+        ],
+        "className": "weather-board",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Current Weather",
+            "className": "weatherBoardHeader",
+          },
+          "ref": null,
+          "rendered": "Current Weather",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <WeatherCard
+                removeCard={[Function]}
+                weather={
+                                Object {
+                                                "currently": Object {
+                                                  "temperature": 70,
+                                                },
+                                                "name": "Los Angeles",
+                                              }
+                }
+/>,
+              <div
+                className="bumper"
+/>,
+              <div
+                className="weather-card-bumper"
+/>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "removeCard": [Function],
+                "weather": Object {
+                  "currently": Object {
+                    "temperature": 70,
+                  },
+                  "name": "Los Angeles",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "bumper",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "weather-card-bumper",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
