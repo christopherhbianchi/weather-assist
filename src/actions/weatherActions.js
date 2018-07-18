@@ -1,7 +1,8 @@
 const CityCoordinates = require('../resources/CityCoordinates.js');
 
-const loadUrl = 'https://api.darksky.net/forecast/33b9d25191f4ef8de9ee678ec256fcb4/37.8267,-122.4233';
-const baseUrl = 'https://api.darksky.net/forecast/33b9d25191f4ef8de9ee678ec256fcb4/';
+const proxyForCors = "https://cors-anywhere.herokuapp.com/";
+const loadUrl = proxyForCors + 'https://api.darksky.net/forecast/33b9d25191f4ef8de9ee678ec256fcb4/37.8267,-122.4233';
+const baseUrl = proxyForCors + 'https://api.darksky.net/forecast/33b9d25191f4ef8de9ee678ec256fcb4/';
 
 //****************************** Actions ************************************
 //Will load data each time a new piece is added
@@ -48,6 +49,7 @@ export const createWeather = (cityCoordinates) => {
   const long = cityCoordinates.locationToAdd.longitude;
   const cityName = cityCoordinates.locationToAdd.name;
   const weatherUrl = baseUrl + lat + ',' + long;
+
   console.log('weatherUrl in createWeather: ' + weatherUrl);
 
   return function(dispatch){

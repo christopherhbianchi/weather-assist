@@ -45,11 +45,11 @@ export class WeatherBoard extends Component {
 
 //This weatherboard is going to need action creators to load weather,
 //as well as access to the State, for the state's weather array
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   weather: state.weather
 });
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   loadWeather: () => dispatch(loadWeather()),
   destroyWeatherSuccess: weather => dispatch(destroyWeatherSuccess(weather))
 });

@@ -5,4 +5,4 @@ module.exports = {
   "ljames":{ "password": "pass3" },
   "kirving":{ "password": "pass4" }
 
-}
+};

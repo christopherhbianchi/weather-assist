@@ -18,8 +18,8 @@ export class AddWeather extends Component {
     console.log(CityCoordinates);
     console.log('AddWeather.js handleChange: ' + event.target.value);
     var location = 0;
-    for(const prop1 in CityCoordinates){
-      if(event.target.value === prop1){
+    for (const prop1 in CityCoordinates){
+      if (event.target.value === prop1){
         location = CityCoordinates[prop1]; //location would have "NewYork" object or something
       }
     }
@@ -36,11 +36,11 @@ export class AddWeather extends Component {
 
     const weatherArr = this.props.weather;//if the key exists already, do nothing
     const found = this.props.weather.filter(city => city.name === locToAdd);
-    if(!found.length) this.props.createWeather(this.state);
+    if (!found.length) this.props.createWeather(this.state);
   }//handleSubmit
 
   render(){
-    return(
+    return (
       <div className='add-weather'>
         <h3 className='bannerAddWeather'>Select City</h3>
         <form className='addCityForm'>
@@ -58,15 +58,15 @@ export class AddWeather extends Component {
 }//closes class
 
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   weather: state.weather
 });
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   createWeather: cityCoordinates => dispatch(createWeather(cityCoordinates))
 });
 
-AddWeather.PropTypes = {
-  weather: PropTypes.obj,
+AddWeather.propTypes = {
+  weather: PropTypes.array,
   createWeather: PropTypes.func
 };
 

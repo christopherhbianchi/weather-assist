@@ -3,7 +3,10 @@ import { shallow } from 'enzyme';
 import { LogIn, mapStateToProps, mapDispatchToProps } from './LogIn.js';
 
 describe('<LogIn />', () => {
-  const renderedComponent = shallow(<LogIn />);
+  const loadUsersSuccessMock = jest.fn();
+  const renderedComponent = shallow(<LogIn
+    loadUsersSuccess={ loadUsersSuccessMock }
+  />);
 
   it('should match snapshot', () => {
     expect(renderedComponent).toMatchSnapshot();

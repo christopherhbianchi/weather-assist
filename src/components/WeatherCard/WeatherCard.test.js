@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import WeatherCard from './WeatherCard.js';
+import { WeatherCard } from './WeatherCard.js';
 
 describe('<WeatherCard />', () => {
 
@@ -16,7 +16,7 @@ describe('<WeatherCard />', () => {
     const renderedComponent = shallow(
       <WeatherCard
         weather={weather}
-        removeCard={{}} />
+        removeCard={ () => {} } />
     );//shallow
     expect(renderedComponent).toMatchSnapshot();
   });//it

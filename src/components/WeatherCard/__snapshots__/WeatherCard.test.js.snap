@@ -1,0 +1,321 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<WeatherCard /> should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <WeatherCard
+    removeCard={[Function]}
+    weather={
+        Object {
+            "currently": Object {
+              "precipProbability": 20,
+              "summary": "clear",
+              "temperature": 70,
+              "windSpeed": 10,
+            },
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <button
+          className="remove-button"
+          onClick={[Function]}
+/>,
+        <h4
+          className="cityName"
+/>,
+        <img
+          src="unknown.svg"
+/>,
+        <p>
+          clear
+</p>,
+        <p>
+          70
+          ° F
+</p>,
+        <p>
+          Wind Speed: 
+          10
+           mph
+</p>,
+        <p>
+          Chance of Rain: 
+          20
+          %
+</p>,
+      ],
+      "className": "weather-card",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "remove-button",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+          "className": "cityName",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "src": "unknown.svg",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "clear",
+        },
+        "ref": null,
+        "rendered": "clear",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            70,
+            "° F",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          70,
+          "° F",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Wind Speed: ",
+            10,
+            " mph",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Wind Speed: ",
+          10,
+          " mph",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Chance of Rain: ",
+            20,
+            "%",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Chance of Rain: ",
+          20,
+          "%",
+        ],
+        "type": "p",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <button
+            className="remove-button"
+            onClick={[Function]}
+/>,
+          <h4
+            className="cityName"
+/>,
+          <img
+            src="unknown.svg"
+/>,
+          <p>
+            clear
+</p>,
+          <p>
+            70
+            ° F
+</p>,
+          <p>
+            Wind Speed: 
+            10
+             mph
+</p>,
+          <p>
+            Chance of Rain: 
+            20
+            %
+</p>,
+        ],
+        "className": "weather-card",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "remove-button",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "className": "cityName",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "src": "unknown.svg",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "clear",
+          },
+          "ref": null,
+          "rendered": "clear",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              70,
+              "° F",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            70,
+            "° F",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Wind Speed: ",
+              10,
+              " mph",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Wind Speed: ",
+            10,
+            " mph",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Chance of Rain: ",
+              20,
+              "%",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Chance of Rain: ",
+            20,
+            "%",
+          ],
+          "type": "p",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

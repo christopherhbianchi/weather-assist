@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Nav /> should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Nav
+    history={
+        Object {
+            "push": [Function],
+          }
+    }
+    logoutUserSuccess={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          className="nav-link"
+          to="/home"
+>
+          WEATHER ASSIST
+</NavLink>,
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          className="nav-link-logout"
+          onClick={[Function]}
+          to="/"
+>
+          LOG OUT
+</NavLink>,
+      ],
+      "className": "nav-bar",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "aria-current": "page",
+          "children": "WEATHER ASSIST",
+          "className": "nav-link",
+          "to": "/home",
+        },
+        "ref": null,
+        "rendered": "WEATHER ASSIST",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "aria-current": "page",
+          "children": "LOG OUT",
+          "className": "nav-link-logout",
+          "onClick": [Function],
+          "to": "/",
+        },
+        "ref": null,
+        "rendered": "LOG OUT",
+        "type": [Function],
+      },
+    ],
+    "type": "nav",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="nav-link"
+            to="/home"
+>
+            WEATHER ASSIST
+</NavLink>,
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="nav-link-logout"
+            onClick={[Function]}
+            to="/"
+>
+            LOG OUT
+</NavLink>,
+        ],
+        "className": "nav-bar",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "aria-current": "page",
+            "children": "WEATHER ASSIST",
+            "className": "nav-link",
+            "to": "/home",
+          },
+          "ref": null,
+          "rendered": "WEATHER ASSIST",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "aria-current": "page",
+            "children": "LOG OUT",
+            "className": "nav-link-logout",
+            "onClick": [Function],
+            "to": "/",
+          },
+          "ref": null,
+          "rendered": "LOG OUT",
+          "type": [Function],
+        },
+      ],
+      "type": "nav",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

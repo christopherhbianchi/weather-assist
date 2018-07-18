@@ -1,7 +1,7 @@
-import { usersReducer } from '../userReducer.js';
+import { usersReducer } from '../usersReducer.js';
 import * as actions from '../../actions/usersActions.js';
 
-describe('userReducer', () => {
+describe('usersReducer', () => {
 
   it('should return the default state', () => {
     const expected = {};
@@ -28,11 +28,12 @@ describe('userReducer', () => {
       cbianchi: { password: 'pass1'},
       ljames: { password: 'pass3' }
     };
-    const newUser = {
-      kirving: { password: 'pass4' }
+    const newUserFromRegForm = {
+      username: 'kirving',
+      password: 'pass4'
     };
     const store = usersObj; //may need to be in brackets
-    const action = actions.registerUserSuccess(newUser);
+    const action = actions.registerUserSuccess(newUserFromRegForm);
     const expected = {
       cbianchi: { password: 'pass1'},
       ljames: { password: 'pass3' },

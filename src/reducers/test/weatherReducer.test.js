@@ -13,12 +13,12 @@ describe('weatherReducer', () => {
       name: 'Los Angeles',
       currently:{
         summary: 'clear'
-      },//currently
+      }, //currently
       latitude: 100
-    }//newWeather
+    };//newWeather
     const store = [];
     const action = actions.createWeatherSuccess(newWeather);
-    const expected = [ newWeather ];
+    const expected = [newWeather];
 
     expect(weatherReducer(store, action)).toEqual(expected);
   });//it

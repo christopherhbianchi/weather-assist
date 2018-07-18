@@ -12,7 +12,7 @@ export const usersReducer = (state = {}, action) => {
     let newState = Object.assign({}, state);
     console.log('Users reducer, newUser: ' + newUser);
     console.log('Users reducer, newUser: ' + newUser.username);
-    newState[newUser.username] = newUser.password;
+    newState[newUser.username] = { password: newUser.password };
     return newState;
   }
   default:

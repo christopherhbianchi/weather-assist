@@ -1,0 +1,446 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AddWeather /> should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <AddWeather
+    locationToAdd={
+        Object {
+            "latitude": 1,
+            "longitude": 1,
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3
+          className="bannerAddWeather"
+>
+          Select City
+</h3>,
+        <form
+          className="addCityForm"
+>
+          <select
+                    className="select"
+                    onChange={[Function]}
+          >
+                    <option
+                              value="LasVegas"
+                    >
+                              Las Vegas
+                    </option>
+                    <option
+                              value="NewYork"
+                    >
+                              New York
+                    </option>
+                    <option
+                              value="Miami"
+                    >
+                              Miami
+                    </option>
+                    <option
+                              value="LosAngeles"
+                    >
+                              Los Angeles
+                    </option>
+          </select>
+          <button
+                    className="addCityButton"
+                    onClick={[Function]}
+          >
+                    Add this city
+          </button>
+</form>,
+      ],
+      "className": "add-weather",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Select City",
+          "className": "bannerAddWeather",
+        },
+        "ref": null,
+        "rendered": "Select City",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <select
+              className="select"
+              onChange={[Function]}
+>
+              <option
+                            value="LasVegas"
+              >
+                            Las Vegas
+              </option>
+              <option
+                            value="NewYork"
+              >
+                            New York
+              </option>
+              <option
+                            value="Miami"
+              >
+                            Miami
+              </option>
+              <option
+                            value="LosAngeles"
+              >
+                            Los Angeles
+              </option>
+</select>,
+            <button
+              className="addCityButton"
+              onClick={[Function]}
+>
+              Add this city
+</button>,
+          ],
+          "className": "addCityForm",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <option
+                  value="LasVegas"
+>
+                  Las Vegas
+</option>,
+                <option
+                  value="NewYork"
+>
+                  New York
+</option>,
+                <option
+                  value="Miami"
+>
+                  Miami
+</option>,
+                <option
+                  value="LosAngeles"
+>
+                  Los Angeles
+</option>,
+              ],
+              "className": "select",
+              "onChange": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Las Vegas",
+                  "value": "LasVegas",
+                },
+                "ref": null,
+                "rendered": "Las Vegas",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "New York",
+                  "value": "NewYork",
+                },
+                "ref": null,
+                "rendered": "New York",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Miami",
+                  "value": "Miami",
+                },
+                "ref": null,
+                "rendered": "Miami",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Los Angeles",
+                  "value": "LosAngeles",
+                },
+                "ref": null,
+                "rendered": "Los Angeles",
+                "type": "option",
+              },
+            ],
+            "type": "select",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Add this city",
+              "className": "addCityButton",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Add this city",
+            "type": "button",
+          },
+        ],
+        "type": "form",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3
+            className="bannerAddWeather"
+>
+            Select City
+</h3>,
+          <form
+            className="addCityForm"
+>
+            <select
+                        className="select"
+                        onChange={[Function]}
+            >
+                        <option
+                                    value="LasVegas"
+                        >
+                                    Las Vegas
+                        </option>
+                        <option
+                                    value="NewYork"
+                        >
+                                    New York
+                        </option>
+                        <option
+                                    value="Miami"
+                        >
+                                    Miami
+                        </option>
+                        <option
+                                    value="LosAngeles"
+                        >
+                                    Los Angeles
+                        </option>
+            </select>
+            <button
+                        className="addCityButton"
+                        onClick={[Function]}
+            >
+                        Add this city
+            </button>
+</form>,
+        ],
+        "className": "add-weather",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Select City",
+            "className": "bannerAddWeather",
+          },
+          "ref": null,
+          "rendered": "Select City",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <select
+                className="select"
+                onChange={[Function]}
+>
+                <option
+                                value="LasVegas"
+                >
+                                Las Vegas
+                </option>
+                <option
+                                value="NewYork"
+                >
+                                New York
+                </option>
+                <option
+                                value="Miami"
+                >
+                                Miami
+                </option>
+                <option
+                                value="LosAngeles"
+                >
+                                Los Angeles
+                </option>
+</select>,
+              <button
+                className="addCityButton"
+                onClick={[Function]}
+>
+                Add this city
+</button>,
+            ],
+            "className": "addCityForm",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <option
+                    value="LasVegas"
+>
+                    Las Vegas
+</option>,
+                  <option
+                    value="NewYork"
+>
+                    New York
+</option>,
+                  <option
+                    value="Miami"
+>
+                    Miami
+</option>,
+                  <option
+                    value="LosAngeles"
+>
+                    Los Angeles
+</option>,
+                ],
+                "className": "select",
+                "onChange": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Las Vegas",
+                    "value": "LasVegas",
+                  },
+                  "ref": null,
+                  "rendered": "Las Vegas",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "New York",
+                    "value": "NewYork",
+                  },
+                  "ref": null,
+                  "rendered": "New York",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Miami",
+                    "value": "Miami",
+                  },
+                  "ref": null,
+                  "rendered": "Miami",
+                  "type": "option",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Los Angeles",
+                    "value": "LosAngeles",
+                  },
+                  "ref": null,
+                  "rendered": "Los Angeles",
+                  "type": "option",
+                },
+              ],
+              "type": "select",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Add this city",
+                "className": "addCityButton",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Add this city",
+              "type": "button",
+            },
+          ],
+          "type": "form",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

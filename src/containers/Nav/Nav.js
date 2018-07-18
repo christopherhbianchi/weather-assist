@@ -28,11 +28,11 @@ export class Nav extends Component {
 }//Nav
 
 //needs the active user
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   activeUser: state.activeUser
 });
 //needs the logout action
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   logoutUserSuccess: () => dispatch(logoutUserSuccess())
 });
 

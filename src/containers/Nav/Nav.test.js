@@ -4,7 +4,12 @@ import { Nav, mapStateToProps, mapDispatchToProps } from './Nav.js';
 
 
 describe('<Nav />', () => {
-  const renderedComponent = shallow(<Nav />);
+  const mockFunction = jest.fn();
+  const renderedComponent = shallow(<Nav
+    logoutUserSuccess={mockFunction}
+    history={
+      { push: () => {} }
+    }/>);
 
   it('should match snapshot', () => {
     expect(renderedComponent).toMatchSnapshot();
@@ -29,8 +34,7 @@ describe('<Nav />', () => {
 
 
   it('should logout user on click', () => {
-    const mockFunction = jest.fn();
-    renderedComponent.find('.nav-link-logout').simulate('click');
+    renderedComponent.find('.nav-link-logout').simulate('click', { preventDefault(){} });
     expect(mockFunction.mock.calls.length).toEqual(1);
   });//it
 

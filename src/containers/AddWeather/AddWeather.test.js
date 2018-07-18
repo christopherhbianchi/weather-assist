@@ -6,7 +6,8 @@ const CityCoordinates = require('../../resources/CityCoordinates.js');
 describe('<AddWeather />', () => {
 
   const renderedComponent = shallow(
-    <AddWeather />
+    <AddWeather
+      locationToAdd={ {latitude: 1, longitude: 1} }/>
   );//shallow
 
 
@@ -23,16 +24,17 @@ describe('<AddWeather />', () => {
     const mockStore = { weather: {} };
     const mapped = mapStateToProps(mockStore);
 
-    expected(mapped).toEqual(mockStore);
+    expect(mapped).toEqual(mockStore);
   });//it
 
   it('should dispatch createWeather', () => {
     const mockDispatch = jest.fn();
     const mapped = mapDispatchToProps(mockDispatch);
 
-    mapped.createWeather();
+    //this method takes a locationToAdd object, which then has latitude and longitude properties
+    mapped.createWeather({ locationToAdd: {latitude: 1, longitude: 1}});
 
-    expected(mockDispatch).toHaveBeenCalled();
+    expect(mockDispatch).toHaveBeenCalled();
   });//it
 
 

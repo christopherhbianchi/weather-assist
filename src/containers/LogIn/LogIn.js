@@ -55,7 +55,7 @@ export class LogIn extends Component {
         this.props.history.push('/home'); //move over to the home page.
       }
     }//outer if
-    else return(alert('Incorrect username and or password'));
+    else return (alert('Incorrect username and or password'));
   }//handleSubmit
 
   handleRegister = async event => {
@@ -91,10 +91,10 @@ export class LogIn extends Component {
   }//render
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   users: state.users //an object of objects
 });
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   loginUserSuccess: user => dispatch(loginUserSuccess(user)),
   loadUsersSuccess: usersObj => dispatch(loadUsersSuccess(usersObj)),
   registerUserSuccess: user => dispatch(registerUserSuccess(user))

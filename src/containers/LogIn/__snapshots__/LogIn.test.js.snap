@@ -1,0 +1,451 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LogIn /> should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <LogIn
+    loadUsersSuccess={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2
+          className="banner"
+>
+          WEATHER ASSIST
+</h2>,
+        <form
+          className="logInForm"
+>
+          <input
+                    className="selectBox"
+                    name="username"
+                    onChange={[Function]}
+                    placeholder="Username"
+                    type="text"
+          />
+          <br />
+          <input
+                    className="selectBox"
+                    name="password"
+                    onChange={[Function]}
+                    placeholder="Password"
+                    type="text"
+          />
+          <br />
+          <div
+                    className="logInBumper"
+          />
+          <button
+                    className="logInButtons"
+                    onClick={[Function]}
+          >
+                    Log In
+          </button>
+          <div
+                    className="logInBumper"
+          />
+          <button
+                    className="logInButtons"
+                    onClick={[Function]}
+          >
+                    Register
+          </button>
+</form>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "WEATHER ASSIST",
+          "className": "banner",
+        },
+        "ref": null,
+        "rendered": "WEATHER ASSIST",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <input
+              className="selectBox"
+              name="username"
+              onChange={[Function]}
+              placeholder="Username"
+              type="text"
+/>,
+            <br />,
+            <input
+              className="selectBox"
+              name="password"
+              onChange={[Function]}
+              placeholder="Password"
+              type="text"
+/>,
+            <br />,
+            <div
+              className="logInBumper"
+/>,
+            <button
+              className="logInButtons"
+              onClick={[Function]}
+>
+              Log In
+</button>,
+            <div
+              className="logInBumper"
+/>,
+            <button
+              className="logInButtons"
+              onClick={[Function]}
+>
+              Register
+</button>,
+          ],
+          "className": "logInForm",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "selectBox",
+              "name": "username",
+              "onChange": [Function],
+              "placeholder": "Username",
+              "type": "text",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "selectBox",
+              "name": "password",
+              "onChange": [Function],
+              "placeholder": "Password",
+              "type": "text",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "logInBumper",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Log In",
+              "className": "logInButtons",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Log In",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "logInBumper",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Register",
+              "className": "logInButtons",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Register",
+            "type": "button",
+          },
+        ],
+        "type": "form",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2
+            className="banner"
+>
+            WEATHER ASSIST
+</h2>,
+          <form
+            className="logInForm"
+>
+            <input
+                        className="selectBox"
+                        name="username"
+                        onChange={[Function]}
+                        placeholder="Username"
+                        type="text"
+            />
+            <br />
+            <input
+                        className="selectBox"
+                        name="password"
+                        onChange={[Function]}
+                        placeholder="Password"
+                        type="text"
+            />
+            <br />
+            <div
+                        className="logInBumper"
+            />
+            <button
+                        className="logInButtons"
+                        onClick={[Function]}
+            >
+                        Log In
+            </button>
+            <div
+                        className="logInBumper"
+            />
+            <button
+                        className="logInButtons"
+                        onClick={[Function]}
+            >
+                        Register
+            </button>
+</form>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "WEATHER ASSIST",
+            "className": "banner",
+          },
+          "ref": null,
+          "rendered": "WEATHER ASSIST",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <input
+                className="selectBox"
+                name="username"
+                onChange={[Function]}
+                placeholder="Username"
+                type="text"
+/>,
+              <br />,
+              <input
+                className="selectBox"
+                name="password"
+                onChange={[Function]}
+                placeholder="Password"
+                type="text"
+/>,
+              <br />,
+              <div
+                className="logInBumper"
+/>,
+              <button
+                className="logInButtons"
+                onClick={[Function]}
+>
+                Log In
+</button>,
+              <div
+                className="logInBumper"
+/>,
+              <button
+                className="logInButtons"
+                onClick={[Function]}
+>
+                Register
+</button>,
+            ],
+            "className": "logInForm",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "selectBox",
+                "name": "username",
+                "onChange": [Function],
+                "placeholder": "Username",
+                "type": "text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "selectBox",
+                "name": "password",
+                "onChange": [Function],
+                "placeholder": "Password",
+                "type": "text",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "logInBumper",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Log In",
+                "className": "logInButtons",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Log In",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "logInBumper",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Register",
+                "className": "logInButtons",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Register",
+              "type": "button",
+            },
+          ],
+          "type": "form",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

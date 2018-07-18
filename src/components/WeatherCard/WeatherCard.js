@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import './WeatherCard.css';
 
 
-class WeatherCard extends Component {
+export class WeatherCard extends Component {
 
   weatherImage = () => {
     let summary = this.props.weather.currently.summary;
     switch (summary) {
     case 'Clear':
-      return 'clear'
+      return 'clear';
     case 'Humid and Partly Cloudy':
       return 'partlycloudy';
     case 'Partly Cloudy':
@@ -46,7 +46,7 @@ class WeatherCard extends Component {
   }//closes render
 }//class
 
-WeatherCard.PropTypes = {
+WeatherCard.propTypes = {
   removeCard: PropTypes.func,
   weather: PropTypes.object
 };

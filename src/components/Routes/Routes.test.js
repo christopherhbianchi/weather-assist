@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Routes, mapStateToProps } from './Routes.js';
+import Routes, { mapStateToProps } from './Routes.js';
 
 describe('<Routes />', () => {
 

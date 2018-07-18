@@ -32,7 +32,7 @@ class Routes extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   activeUser: state.activeUser
 });
 
