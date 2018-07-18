@@ -23,8 +23,4 @@ export class Home extends Component {
   }//closes render
 }
 
-//mapStateToProps
-//mapDispatchToProps
-//PropTypes
-
 export default connect(null, null)(Home);

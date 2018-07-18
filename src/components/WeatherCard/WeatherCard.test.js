@@ -5,7 +5,7 @@ import { WeatherCard } from './WeatherCard.js';
 describe('<WeatherCard />', () => {
 
   it('should match snapshot', () => {
-    const weather = { //weather object, currently object, summary is a propert of currently
+    const weather = { //weather object, currently object, summary is a property of currently
       currently:{
         summary:'clear',
         temperature:70,

@@ -15,18 +15,13 @@ export class AddWeather extends Component {
   }//closes constructor
 
   handleChange = async (event) => {
-    console.log(CityCoordinates);
-    console.log('AddWeather.js handleChange: ' + event.target.value);
     var location = 0;
-    for (const prop1 in CityCoordinates){
-      if (event.target.value === prop1){
-        location = CityCoordinates[prop1]; //location would have "NewYork" object or something
-      }
-    }
-    console.log('location after for in: ' + location);
-    console.log('location.latitude after for in: ' + location.latitude);
-    await this.setState({ locationToAdd: location },
-    () => { console.log('setState callback in handleChange: ' + this.state.locationToAdd.latitude) });//closes setState
+    for(const prop1 in CityCoordinates){
+      if(event.target.value === prop1){
+        location = CityCoordinates[prop1]; //location would have "NewYork" object
+      }//if
+    }//for
+    await this.setState({ locationToAdd: location });//closes setState
 
   }//closes handleChange
 

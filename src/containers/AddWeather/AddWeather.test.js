@@ -37,10 +37,4 @@ describe('<AddWeather />', () => {
     expect(mockDispatch).toHaveBeenCalled();
   });//it
 
-
-
-
-
-
-
 });//describe
