@@ -41,7 +41,7 @@ ShallowWrapper {
                     name="password"
                     onChange={[Function]}
                     placeholder="Password"
-                    type="text"
+                    type="password"
           />
           <br />
           <div
@@ -98,7 +98,7 @@ ShallowWrapper {
               name="password"
               onChange={[Function]}
               placeholder="Password"
-              type="text"
+              type="password"
 />,
             <br />,
             <div
@@ -157,7 +157,7 @@ ShallowWrapper {
               "name": "password",
               "onChange": [Function],
               "placeholder": "Password",
-              "type": "text",
+              "type": "password",
             },
             "ref": null,
             "rendered": null,
@@ -254,7 +254,7 @@ ShallowWrapper {
                         name="password"
                         onChange={[Function]}
                         placeholder="Password"
-                        type="text"
+                        type="password"
             />
             <br />
             <div
@@ -311,7 +311,7 @@ ShallowWrapper {
                 name="password"
                 onChange={[Function]}
                 placeholder="Password"
-                type="text"
+                type="password"
 />,
               <br />,
               <div
@@ -370,7 +370,7 @@ ShallowWrapper {
                 "name": "password",
                 "onChange": [Function],
                 "placeholder": "Password",
-                "type": "text",
+                "type": "password",
               },
               "ref": null,
               "rendered": null,
