@@ -9,6 +9,7 @@ Weather Assist is a personalized online hub designed to allow users to view the 
 2. Users are able to choose their city of choice via a preloaded dropdown menu. Once selected, a customized weather card of the current summary, temperature, chance of rain, and wind speed, is rendered for the selected city.
 3. Users are able to make changes to their list of monitored cities. Such as updating their list, and deleting cards they're no longer interested in.
 
+
 ## Technologies Used
 * JavaScript
 * React
@@ -19,6 +20,7 @@ Weather Assist is a personalized online hub designed to allow users to view the 
 * ESLint
 * Jest
 * Enzyme
+
 
 ## Wire Frame
 ![Login And Register Page](./public/screenshots/LoginAndRegister.png)
