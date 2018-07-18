@@ -8,7 +8,8 @@ Weather Assist is a personalized online hub designed to allow users to view the 
 1. Users are able to LogIn and register to their personalized account where weather preferences have been saved.
 2. Users are able to choose their city of choice via a preloaded dropdown menu. Once selected, a customized weather card of the current summary, temperature, chance of rain, and wind speed, is rendered for the selected city.
 3. Each rendered weather card features an svg weather icon which is dynamically rendered based upon the current summary of the location. Types of summaries include: clear, partly cloudy, mostly cloudy, drizzle, rain, and more.
-4. Users are able to make changes to their list of monitored cities. Such as updating their list, and deleting cards they're no longer interested in.
+4. Cities are fetched via a customized request to the Dark Sky API, by taking the city's unique longitude and latitude, and placing them within the request url.
+5. Users are able to make changes to their list of monitored cities. Such as updating their list, and deleting cards they're no longer interested in.
 
 
 ## Technologies Used
