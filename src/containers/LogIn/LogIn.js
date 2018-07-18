@@ -25,7 +25,7 @@ export class LogIn extends Component {
   }
   seedData = () => { //seed data from hard coded data
     let usersToSeed = {};
-    for(let u in users) usersToSeed[u] = users[u];
+    for(let usr in users) usersToSeed[usr] = users[usr];
     return usersToSeed;
   }
 
@@ -43,14 +43,9 @@ export class LogIn extends Component {
     const givenUsername = this.state.username;
     const givenPassword = this.state.password;
 
-    console.log('All users from imported json keys: ' + Object.keys(users));
-    console.log('line 45 All Users: ' + allUsers);
-    console.log('All keys of allUsers: ' + Object.keys(allUsers));
-    console.log('All Users: ' + allUsers['cbianchi']);
-    console.log('allUsers[givenUsername].password: ' + allUsers[givenUsername].password);
     if(allUsers[givenUsername]){
       const targetUser = allUsers[givenUsername];
-      if(targetUser.password === givenPassword){//if username exists, check password
+      if(targetUser.password === givenPassword){ //if username exists, check password
         await this.props.loginUserSuccess(this.state); //add this user to our activeUser state
         this.props.history.push('/home'); //move over to the home page.
       }

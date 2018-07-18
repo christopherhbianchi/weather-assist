@@ -17,7 +17,7 @@ export class Nav extends Component {
   }
 
   render(){
-    const activeUser = this.props.activeUser; //this is always an object. Always truthy
+    const activeUser = this.props.activeUser;
     return (
       <nav className='nav-bar'>
         <NavLink className='nav-link' to='/home'>WEATHER ASSIST</NavLink>
