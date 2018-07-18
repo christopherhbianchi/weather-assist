@@ -31,7 +31,6 @@ export class WeatherBoard extends Component {
 
   render(){
     const weatherArr = this.props.weather;
-    console.log('in Weatherboard weatherArr: ' + weatherArr);
     return weatherArr.length < 1 ? null :
       <div className='weather-board'>
         <h3 className='weatherBoardHeader'>Current Weather</h3>
