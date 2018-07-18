@@ -78,14 +78,14 @@ export class LogIn extends Component {
     return(
       <div>
         <h2 className='banner'>WEATHER ASSIST</h2>
-          <form className='logInForm'>
+        <form className='logInForm'>
           <input className='selectBox' type='text' name='username' placeholder='Username' onChange={this.handleChange}/><br/>
-          <input className='selectBox' type='text' name='password' placeholder='Password' onChange={this.handleChange}/><br/>
+          <input className='selectBox' type='password' name='password' placeholder='Password' onChange={this.handleChange}/><br/>
           <div className='logInBumper'></div>
           <button className='logInButtons' onClick={this.handleLogIn}>Log In</button>
           <div className='logInBumper'></div>
           <button className='logInButtons' onClick={this.handleRegister}>Register</button>
-      </form>
+        </form>
       </div>
     );//return
   }//render
