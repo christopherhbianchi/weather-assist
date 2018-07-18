@@ -22,7 +22,7 @@ Weather Assist is a personalized online hub designed to allow users to view the 
 * ESLint
 * Jest
 * Enzyme
-* Npm
+* NPM
 
 
 ## Wire Frame
