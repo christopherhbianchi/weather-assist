@@ -33,7 +33,6 @@
       "comma-spacing": ["error", { "before": false, "after": true }],
       "comma-style": ["error", "last"],
       "computed-property-spacing": ["error", "never"],
-      
       "max-len": ["warn", 300],
       "no-duplicate-imports": "error",
       "id-length": "error",
