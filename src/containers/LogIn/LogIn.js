@@ -25,7 +25,7 @@ export class LogIn extends Component {
   }
   seedData = () => { //seed data from hard coded data
     let usersToSeed = {};
-    for(let u in users) usersToSeed[u] = users[u];
+    for(let usr in users) usersToSeed[usr] = users[usr];
     return usersToSeed;
   }
 

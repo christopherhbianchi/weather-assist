@@ -14,7 +14,7 @@ export class Home extends Component {
   }
 
   render(){
-    return (
+    return(
       <div>
         <AddWeather />
         <WeatherBoard />
