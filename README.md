@@ -21,6 +21,6 @@ Weather Assist is a personalized online hub designed to allow users to view the 
 * Enzyme
 
 ## Wire Frame
-![Login And Register Page](./public/LoginAndRegister.png)
-![Home Page](./public/HomePage.png)
-![Weather Cards](./public/WeatherCards.png)
+![Login And Register Page](./public/screenshots/LoginAndRegister.png)
+![Home Page](./public/screenshots/HomePage.png)
+![Weather Cards](./public/screenshots/WeatherCards.png)
