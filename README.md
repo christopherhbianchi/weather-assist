@@ -29,3 +29,10 @@ Weather Assist is a personalized online hub designed to allow users to view the 
 ![Login And Register Page](./public/screenshots/LoginAndRegister.png)
 ![Home Page](./public/screenshots/HomePage.png)
 ![Weather Cards](./public/screenshots/WeatherCards.png)
+
+
+## Installation
+1. Clone down the repository
+2. From the cloned directory run `npm install`
+3. Run the app on localhost:3000 by default, `npm start`
+4. For testing run `npm test` from the same directory
