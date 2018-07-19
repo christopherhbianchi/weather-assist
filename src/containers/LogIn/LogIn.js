@@ -81,6 +81,7 @@ export class LogIn extends Component {
           <div className='logInBumper'></div>
           <button className='logInButtons' onClick={this.handleRegister}>Register</button>
         </form>
+        <div className='loginPhoto'></div>
       </div>
     );//return
   }//render
