@@ -1,3 +1,9 @@
+.notFoundDiv{
+  background: #1e1e1e;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  height: 100vh;
+}
 .notFoundMessage{
   margin: 0;
   padding-top: 130px;

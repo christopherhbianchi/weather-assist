@@ -3,7 +3,7 @@ import './NotFound.css';
 
 export const NotFound = props => {
   return (
-    <div>
+    <div className='notFoundDiv'>
       <h2 className='notFoundMessage'>Resource not found.</h2>
     </div>
   );
