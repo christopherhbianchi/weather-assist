@@ -27,6 +27,9 @@ Weather Assist is a personalized online hub designed to allow users to view the 
 ## Deployed To
 https://cbianchi-weather-assist.herokuapp.com/
 
+## Log In and Registration
+1. To login with preexisting account information use username: cbianchi, and for password: pass1
+2. To register, type a valid username and password into the initial login form, and then click the register button to be added as a user with said info.
 
 ## Wire Frame
 ![Login And Register Page](./public/screenshots/LoginAndRegister.png)
