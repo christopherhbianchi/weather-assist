@@ -84,7 +84,19 @@ export class LogIn extends Component {
           <div className='logInBumper'></div>
           <button className='logInButtons' onClick={this.handleRegister}>Register</button>
         </form>
-        <div className='loginPhoto'></div>
+        {/*<div className='loginPhoto'></div>*/}
+        <div>
+          <video
+            className='loginVideo'
+            poster='../../assets/Evening_breeze.mp4'
+            autoPlay
+            plays-inline
+            loop>
+            <source src={require('../../assets/loginVideos/Lightning-and-Thunder.mp4')} type='video/mp4'></source>
+            <source src={require('../../assets/loginVideos/Sunset-Lapse.ogv')} type='video/ogg'></source>
+          </video>
+        </div>
+
       </div>
     );//return
   }//render
