@@ -26,7 +26,7 @@ Weather Assist is a personalized online hub designed to allow users to view the 
 
 ## Deployed To
 https://cbianchi-weather-assist.herokuapp.com/
-View in the Chrome browser.
+* View in the Chrome browser.
 
 ## Log In and Registration
 1. To login with preexisting account information use username: cbianchi, and for password: pass1
