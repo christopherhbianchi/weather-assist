@@ -93,7 +93,7 @@ export class LogIn extends Component {
             plays-inline='true'
             muted
             loop>
-            <source src={require('../../assets/loginVideos/Lightning-and-Thunder.mp4')} type='video/mp4'></source>
+            <source src={require('../../assets/loginVideos/Sunset-Lapse.mp4')} type='video/mp4'></source>
             <source src={require('../../assets/loginVideos/Sunset-Lapse.ogv')} type='video/ogg'></source>
           </video>
         </div>
