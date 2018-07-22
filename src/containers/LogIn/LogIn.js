@@ -90,7 +90,7 @@ export class LogIn extends Component {
             className='loginVideo'
             poster='../../assets/Evening_breeze.mp4'
             autoPlay
-            plays-inline
+            plays-inline='true'
             loop>
             <source src={require('../../assets/loginVideos/Lightning-and-Thunder.mp4')} type='video/mp4'></source>
             <source src={require('../../assets/loginVideos/Sunset-Lapse.ogv')} type='video/ogg'></source>
