@@ -60,7 +60,7 @@ export class LogIn extends Component {
     const givenPassword = this.state.password;
 
     if(allUsers[givenUsername]) return alert('Registered user already exists');
-    else if(this.state.username === '' || this.state.password){
+    else if(this.state.username === '' || this.state.password === ''){
       return (alert('Please enter a valid username and password to register.'));
     }
     else{
