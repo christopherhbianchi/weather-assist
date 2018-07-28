@@ -37,7 +37,7 @@ export const loadWeather = () => {
       .then( async response => {
         const weather = await response.json();
         weather.name = "Los Angeles";
-        await dispatch(loadWeatherSuccess(weather));
+        dispatch(loadWeatherSuccess(weather));
       });
   };//closes function
 };//closes loadWeather
@@ -55,7 +55,7 @@ export const createWeather = (cityCoordinates) => {
       .then( async response => {
         const weather = await response.json();
         weather.name = cityName;
-        await dispatch(createWeatherSuccess(weather));
+        dispatch(createWeatherSuccess(weather));
       });
   };//closes function
 };//closes createWeather
