@@ -1,6 +1,6 @@
 .weather-board {
   box-shadow: 10px 15px 17px #0e0e0e;
-  width: 410px;
+  max-width: 410px;
   background: #345fa5;
   color: white;
   border-radius: 8px;
