@@ -16,9 +16,7 @@ class Routes extends Component {
 /*
 so we're saying that if the activeUser does not have a username property, then
 only expose these routes...
-
--->(!this.props.activeUser.username)
-
+-->(!this.props.activeUser.userna
 */
   render() {
     return (
