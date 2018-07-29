@@ -47,6 +47,7 @@ export class LogIn extends Component {
       const targetUser = allUsers[givenUsername];
       if(targetUser.password === givenPassword){ //if username exists, check password
         await this.props.loginUserSuccess(this.state); //add this user to our activeUser state
+        await this.setLocalStorage();
         this.props.history.push('/home'); //move over to the home page.
       }
     }//outer if
@@ -66,9 +67,14 @@ export class LogIn extends Component {
     else{
       await this.props.registerUserSuccess(this.state);
       await this.props.loginUserSuccess(this.state);
+      await this.setLocalStorage();
       this.props.history.push('/home');
     }//else
   }//handleRegister
+
+  setLocalStorage = () => {
+    localStorage.setItem('activeUser', true);
+  }//setLocalStorage
 
 
 

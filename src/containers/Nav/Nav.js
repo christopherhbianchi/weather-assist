@@ -13,7 +13,8 @@ export class Nav extends Component {
   handleLogout = async (event) => {
     event.preventDefault();
     await this.props.logoutUserSuccess();
-    await this.props.history.push('/');
+    await localStorage.clear();
+    this.props.history.push('/');
   }
 
   render(){

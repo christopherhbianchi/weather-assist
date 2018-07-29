@@ -13,9 +13,16 @@ class Routes extends Component {
 //With switch, it goes through each of your routes like a switch statement
 //Nav outside so it can be rendered regardless anyways
 
+/*
+so we're saying that if the activeUser does not have a username property, then
+only expose these routes...
+
+-->(!this.props.activeUser.username)
+
+*/
   render() {
     return (
-      (!this.props.activeUser.username) ?
+      (!localStorage.getItem('activeUser')) ?
         <Switch>
           <Route exact path='/' component={LogIn} />
           <Route component={NotFound} />
