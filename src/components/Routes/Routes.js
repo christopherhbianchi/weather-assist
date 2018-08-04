@@ -15,9 +15,7 @@ class Routes extends Component {
 //Nav outside so it can be rendered regardless anyways
 
 /*
-so we're saying that if the activeUser does not have a username property, then
-only expose these routes...
--->(!this.props.activeUser.userna
+Only expose the home component route if there's an active user in local storage
 */
   render() {
     return (
