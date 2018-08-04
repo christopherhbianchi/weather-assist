@@ -7,6 +7,7 @@ import Nav from '../../containers/Nav/Nav.js';
 import Home from '../../containers/Home/Home.js';
 import LogIn from '../../containers/LogIn/LogIn.js';
 import NotFound from '../NotFound/NotFound.js';
+import PrivateRoute from '../PrivateRoute/PrivateRoute.js';
 
 class Routes extends Component {
 
@@ -20,19 +21,14 @@ only expose these routes...
 */
   render() {
     return (
-      (!localStorage.getItem('activeUser')) ?
+      <div>
+        <Route path='/' component={Nav} />
         <Switch>
           <Route exact path='/' component={LogIn} />
+          <PrivateRoute exact path='/home' component={Home} activeUser={localStorage.getItem('activeUser')}/>
           <Route component={NotFound} />
         </Switch>
-        :
-        <div>
-          <Route path='/' component={Nav} />
-          <Switch>
-            <Route exact path='/home' component={Home} />
-            <Route component={NotFound} />
-          </Switch>
-        </div>
+      </div>
     );//return
   }
 }

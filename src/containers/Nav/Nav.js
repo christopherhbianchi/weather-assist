@@ -18,13 +18,12 @@ export class Nav extends Component {
   }
 
   render(){
-    const activeUser = this.props.activeUser;
-    return (
+    return (localStorage.getItem('activeUser')) ? (
       <nav className='nav-bar'>
         <NavLink className='nav-link' to='/home'>WEATHER ASSIST</NavLink>
         <NavLink className='nav-link-logout' to='/' onClick={this.handleLogout}>LOG OUT</NavLink>
       </nav>
-    );//closes return
+    ) : ( <div></div> );
   }//closes render
 }//Nav
 
